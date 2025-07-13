@@ -1,0 +1,257 @@
+@media(max-width:1200px){
+  .gallery {
+       grid-template-columns: repeat(2, 1fr);
+        transition: 0.3s ease;
+  }
+}
+@media(min-width:1201px){
+  .gallery {
+       grid-template-columns: repeat(3, 1fr);
+        transition: 0.3s ease;
+  }
+}
+
+@media(max-width:1200px){
+  .wide {
+       grid-column: span 2;
+  }
+  .wide2 {
+        grid-column: span 2;    
+}
+.tall {
+       grid-row: span 1;
+  }
+}
+@media(min-width:1201px){
+  .wide {
+       grid-column: span 3;
+  }
+  .wide2 {
+      grid-column: span 2;
+}
+ .tall {
+       grid-row: span 2;
+  }
+}
+
+/*for responsive gallery ^^*/
+
+
+html {
+  scroll-behavior: smooth;
+  min-width: 800px;
+}
+
+body {
+  font-family: sans-serif;
+  color: #b95d3b;
+  background-image: linear-gradient(to right, #edd9cd 1px, transparent 1px),
+    linear-gradient(to bottom, #edd9cd 1px, transparent 1px);
+  background-size: 140px 140px;
+}
+
+.logo {
+  transform: scale(0.1);
+  object-fit: contain;
+  height: 200px;
+  margin-top: -80px;
+  margin-bottom: -15px;
+  text-align: center;
+}
+.logo:hover {
+  transform: scale(0.105);
+  transition: transform 0.3s ease;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+#navbar {
+  border: solid 2px #b95d3b;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.nav-link {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 100px;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: #b95d3b;
+}
+
+.anim:hover {
+  background-color: #aabef1;
+  width: 180px;
+  color: #fffffa;
+}
+.illust:hover {
+  background-color: #ffbf69;
+  width: 180px;
+  color: #fffffa;
+}
+.abtme:hover {
+  background-color: #d76565;
+  width: 180px;
+  color: #fffffa;
+}
+/* landing page */
+#landing {
+  font-size: 40px;
+  padding: 35px;
+  text-align: left;
+  margin: 30px 100px;
+}
+.h2 {
+  font-size: 25px;
+  margin-top: -15px;
+}
+.text {
+  font-size: 20px;
+  margin-top: 50px;
+  line-height: 40px;
+}
+.chat {
+  color: #ffbf69;
+  text-decoration: none;
+}
+.image {
+  position: absolute;
+  left: 1100px;
+  right: 200px;
+  top: 180px;
+  transform: scaleX(-1);
+  z-index: -1;
+  opacity: 20%;
+}
+
+/* for animation page */
+.animh1 {
+  font-size: 40px;
+  padding: 35px;
+  text-align: center;
+}
+.video {
+  max-width: 60%;
+  display: block;
+  margin: auto;
+  margin-bottom: -150px;
+}
+
+/*illustdes gallery page*/
+.gallery {
+  display: grid;
+  gap: 15px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+
+/* for abtme page */
+.profileimg {
+  max-width: 40%;
+  height: auto;
+  transform: none;
+  margin-top: -70px;
+  object-fit: contain;
+}
+.abtmepg {
+  display: flex;
+  max-width: 80%;
+  text-align: left;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: -60px;
+}
+.abth1 {
+  font-size: 40px;
+  text-align: left;
+}
+.abth2 {
+  font-size: 25px;
+  margin-top: -5px;
+}
+.abt-text {
+  font-size: 18px;
+  margin-top: 35px;
+  line-height: 40px;
+}
+.abtmetext-box {
+  margin-top: 130px;
+  margin-right: 100px;
+  margin-bottom: 150px;
+}
+.skills {
+  color: #9e4321;
+}
+.skillslist {
+  line-height: 25px;
+}
+.abtexp {
+  max-width: 70%;
+  margin: auto;
+  margin-bottom: -150px;
+}
+.abth1-ex {
+  font-size: 40px;
+  text-align: left;
+  max-width: 80%;
+  margin-left: 100px;
+}
+.abt-extext {
+  margin-left: 120px;
+  line-height: 26px;
+  font-size: 17px;
+}
+.abt-inline {
+  margin-left: 45px;
+}
+.abt-date {
+  font-style: oblique;
+  font-size: 12px;
+}
+
+/* footer */
+.footer {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 200px;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 50px;
+}
+.ig img,
+.em img {
+  transform: scale(0.5);
+  margin-bottom: -35px;
+}
+.ig img:hover,
+.em img:hover {
+  transform: scale(0.6);
+}
+.em {
+  margin-left: -40px;
+}
+.foot-date {
+  font-style: oblique;
+  font-size: 10px;
+}
