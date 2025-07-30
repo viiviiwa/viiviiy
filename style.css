@@ -109,7 +109,6 @@ nav > ul {
   padding: 35px;
   text-align: left;
   margin: 40px 100px;
-  background-color: rgb(255, 255, 255, 0.3);
   border-radius:40px;
 }
 .h2 {
@@ -127,13 +126,11 @@ nav > ul {
   text-decoration: none;
 }
 .splash {
-  transform: scale(0.37);
-  margin-left: -800px;
-  margin-top: -1250px;
-  opacity: 80%;
+  margin-top: -550px;
+  margin-bottom: -200px;
+  margin-left: 29vw;
   z-index: -1;
-  position: absolute;
-  
+  position: relative;
 }
 
 /* for animation page */
@@ -163,6 +160,9 @@ nav > ul {
   border-radius: 12px;
   display: block;
   transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
 }
 .gallery img:hover {
   transform: scale(1.2);
