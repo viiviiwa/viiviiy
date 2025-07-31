@@ -126,9 +126,9 @@ nav > ul {
   text-decoration: none;
 }
 .splash {
-  margin-top: -550px;
-  margin-bottom: -200px;
-  margin-left: 29vw;
+  margin-top: -600px;
+  margin-bottom: -240px;
+  margin-left: 16vw;
   z-index: -1;
   position: relative;
 }
