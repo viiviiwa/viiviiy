@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import viivii_ig from "../assets/images/viiviiy_ig.png";
+import viivii_mail from "../assets/images/viiviiy_mail.png";
+---
+
+<div class="footer">
+  <span class="icons">
+    <span class="ig">
+      <a href="https://www.instagram.com/pokitokki/">
+        <Image src={viivii_ig} alt="instagram" />
+      </a>
+    </span>
+    <span class="em">
+      <a href="mailto:pokiitokki@gmail.com">
+        <Image src={viivii_mail} alt="mail" />
+      </a>
+    </span>
+  </span>
+  <p class="foot-text">
+    &copy; pokitokki 2025
+    <br />
+    <span class="foot-date">July 2025</span>
+  </p>
+  <!-- TODO: Doodles on both sides of the footer. -->
+</div>

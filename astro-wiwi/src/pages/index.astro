@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import viivii_gif from "../assets/images/viiviiy_gif_transparent.gif";
+---
+
+<Layout>
+  <div class="landing" id="landing">
+    <h1>hello! i'm vivi</h1>
+    <p class="h2">Illustrator &amp; Animator</p>
+    <br />
+    <p class="text">
+      I'm a Sydney based freelance artist, with a Bdes in Animation.
+      <br />
+      Available for freelance and collaborations : )
+      <br />
+      <b
+        >Let's
+        <a href="mailto:vivienneyao20@gmail.com" class="chat"> chat! </a>
+      </b>
+    </p>
+  </div>
+  <div>
+    <p class="splash">
+      <Image src={viivii_gif} alt="viivii gif" />
+    </p>
+  </div>
+</Layout>
