@@ -1,23 +1,20 @@
 ---
-import { Image } from 'astro:assets';
-import viivii_logo from '../assets/images/viiviiy-logo.png';
+import { Image } from "astro:assets";
+import viivii_logo from "../assets/images/header_homeicon3.png";
 ---
 
 <header>
   <div class="stickytop">
     <p class="logo">
       <a href="/">
-        <Image src={viivii_logo} alt="logo"/>
+        <Image src={viivii_logo} alt="logo" />
       </a>
     </p>
   </div>
   <nav id="navbar">
     <a class="nav-link anim" href="/animations">animation</a>
-    <a class="nav-link illust" href="/illustrations"
-      >illustration &amp; design
-    </a>
-    <a class="nav-link abtme" href="/about-me"
-      >about &amp; contact</a
-    >
+    <a class="nav-link design" href="/design">design</a>
+    <a class="nav-link illust" href="/illustrations">illustration</a>
+    <a class="nav-link nav-side abtme" href="/about-me">about &amp; contact</a>
   </nav>
 </header>
