@@ -45,5 +45,14 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-todo: 
-6. start js > hamburger (nav) click on photos  
+## TODO
+
+<!-- FIXME: Try to use checkboxes `- [ ] blah blah`, and when done, `- [x] blah blab`-->
+6. start js > hamburger (nav) click on photos
+
+- [ ] Learn relative units
+
+## References
+
+- You can try checking Butterick's Typography for better typography practices: <https://practicaltypography.com/>
+-

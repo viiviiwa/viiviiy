@@ -11,11 +11,12 @@ import viiviiy_pp from "../assets/images/pfp2blue.png";
       <h1 class="abth1">⊹ nice to meet you ⊹</h1>
       <p class="abth2">i'm vivi! — an animator & designer!</p>
 
+      <!-- FIXME: <br /> means hard line break, try to differentiate them with paragraph breaks, which are more semantic, for a paragraph break, just close the paragraph element and create a new paragraph. -->
       <p class="abt-text">
-        My background is in illustration and animation. I love to bring 
-        characters to life through 2D animation and visual
-        development. I specialise in 2D character animation (storyboarding &
-        rough animation) and visual development!
+        My background is in illustration and animation. I love to bring
+        characters to life through 2D animation and visual development. I
+        specialise in 2D character animation (storyboarding & rough animation)
+        and visual development!
         <br />
         <br />
         I am also currently expanding into UI/UX design, exploring how interactivity
@@ -23,10 +24,16 @@ import viiviiy_pp from "../assets/images/pfp2blue.png";
         background in storytelling and visual communication.
         <br />
         <br />
-        I've graduated from UTS with a Bachelors of Design in Animation, and I am now working on my Masters in Interaction Design and Electronic Arts at the University of Sydney. 
+        I've graduated from UTS with a Bachelors of Design in Animation, and I am
+        now working on my Masters in Interaction Design and Electronic Arts at the
+        University of Sydney.
       </p>
+      <!-- FIXME: Avoid using <br /> for spacing. Use CSS margin or padding instead. -->
       <br />
+      <!-- FIXME: Try to use heading element hierarchically, h1, h2, h3... -->
       <span class="skills">skills — </span>
+      <!-- FIXME: This is a list of skills. It would be more semantic to use an unordered list (<ul>) with list items (<li>) for each skill. -->
+
       <br /><span class="skillslist"
         >UI &amp; Visual Design ⊹ Figma ⊹ Storyboarding ⊹ Concept Art ⊹ Adobe ⊹
         Illustration ⊹ Motion Graphics ⊹ Blender ⊹ ToonBoom Harmony
@@ -34,9 +41,13 @@ import viiviiy_pp from "../assets/images/pfp2blue.png";
     </div>
   </div>
 
+  <!-- TODO: This could be a <section> element with an id, e.g., <section id="experience"> -->
   <div class="abtexp">
+    <!-- FIXME: There should only be one <h1> per page. This should be an <h2> because it's a subsection of the page. -->
     <h1 class="abth1-ex">experience —</h1>
+    <!-- FIXME: This structure is hard for screen readers to parse. Consider using a <ul> with each job as a <li>. Inside each <li>, you could use a heading for the role and paragraphs for the details. Using <br> for layout should be avoided. -->
     <p class="abt-extext">
+      <!-- FIXME: Date ranges use en-dash, not simple dash, you can use the en-dash with `&ndash;` -->
       ⊹ Intern @ Armchair Productions <span class="abt-date"
         >(July 2024 - Sep 2024)</span
       > ⊹

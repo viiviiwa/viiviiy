@@ -4,8 +4,11 @@ import viivii_ig from "../assets/images/ig logo2.png";
 import viivii_mail from "../assets/images/viiviiy_mail2.png";
 ---
 
+<!-- FIXME: Try to use the footer element instead of a div, it's about semantically correct elements. -->
 <div class="footer">
+  <!-- FIXME: Try to use a div instead of a span, divs are container blocks, spans are inline portions that need to be wrapped. -->
   <span class="icons">
+    <!-- FIXME: You don't necessarily need to nest the anchor with a span, you can just use the anchor fine. -->
     <span class="ig">
       <a href="https://www.instagram.com/pokitokki/">
         <Image src={viivii_ig} alt="instagram" />
@@ -18,7 +21,13 @@ import viivii_mail from "../assets/images/viiviiy_mail2.png";
     </span>
   </span>
   <p class="foot-text">
+    <!-- TODO: You can try computing the copyright year instead of leaving it static, with javascript using `&copy; pokitokki 2025 {new Date().getFullYear()}` -->
     &copy; pokitokki 2025
     <br />
   </p>
 </div>
+
+<!-- TODO: You can try moving your footer related styles to the scoped styles in this component, so it's more organized and easier to maintain for you. These styles are only applied for this component, not globally (for your whole site), so you don't have to worry of them overriding your other styles. -->
+<style>
+  /* footer styles... */
+</style>

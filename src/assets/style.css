@@ -1,9 +1,9 @@
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  /* TODO: Try to find a better font other than relying on the system ones, system-ui means each user that sees your page will use their browser system font, if I'm on Ubuntu with Firefox my font could be Ubuntu or Libertinus Sans or Serif, if I'm on Windows, it could be Cambria or Arial, and different for MacOS, or phones, check Google Fonts page https://fonts.google.com/, some recommended are Adobe Source Serif/Sans, Google's Inter or Roboto, IBM Plex, etc. Check Butterick's practices on fonts suggestions, and so on. */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #89371a;
   background-image:
@@ -17,20 +17,21 @@ body {
   height: 200px;
   margin-top: -70px;
   margin-bottom: -35px;
-  margin-left: -70px; 
+  margin-left: -70px;
 }
+
 .logo:hover {
   transform: scale(0.105);
   transition: transform 0.3s ease;
 }
 
-nav > ul {
+nav>ul {
   list-style: none;
   padding: 0.5rem;
 }
 
 header {
-  display: grid; 
+  display: grid;
   grid-template-columns: 900px;
   gap: 20px;
   text-align: center;
@@ -38,11 +39,11 @@ header {
 }
 
 #navbar {
-  display: flex;  
+  display: flex;
 }
 
 .nav-link {
-  padding-top: 10px; 
+  padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 10px;
   padding-left: 10px;
@@ -60,6 +61,7 @@ header {
   width: 180px;
   color: #fffffa;
 }
+
 .design:hover {
   background-color: #3960c380;
   width: 180px;
@@ -71,6 +73,7 @@ header {
   width: 180px;
   color: #fffffa;
 }
+
 .abtme:hover {
   background-color: #575ed980;
   width: 180px;
@@ -86,21 +89,25 @@ header {
   margin: 40px 200px;
   border-radius: 40px;
 }
+
 .h2 {
   font-size: 25px;
   margin-top: -15px;
   margin-bottom: -20px;
   color: #505ce3;
 }
+
 .text {
   font-size: 20px;
   margin-top: 10px;
   line-height: 40px;
 }
+
 .chat {
   color: #74a7e1;
   text-decoration: none;
 }
+
 .splash {
   margin-top: -550px;
   margin-bottom: -240px;
@@ -108,7 +115,7 @@ header {
   z-index: -1;
   filter: saturate(125%);
   position: relative;
-  opacity:0;
+  opacity: 0;
 }
 
 /* for animation page */
@@ -117,6 +124,7 @@ header {
   padding: 35px;
   text-align: center;
 }
+
 .video {
   max-width: 60%;
   display: block;
@@ -131,18 +139,18 @@ header {
   grid-template-rows: 1fr;
   gap: 1.2em;
   grid-template-areas:
-  "box-1 box-1 box-1" 
-  "box-2 box-3 box-4"
-  "box-5 box-6 box-6"
-  "box-7 box-7 box-7"
-  "box-8 box-9 box-10"
-  "box-11 box-12 box-13"
-  "box-14 box-12 box-16"
-  "box-15 box-15 box-15";
+    "box-1 box-1 box-1"
+    "box-2 box-3 box-4"
+    "box-5 box-6 box-6"
+    "box-7 box-7 box-7"
+    "box-8 box-9 box-10"
+    "box-11 box-12 box-13"
+    "box-14 box-12 box-16"
+    "box-15 box-15 box-15";
   max-width: 80%;
   margin: auto;
   justify-content: center;
-  margin-top: 100px; 
+  margin-top: 100px;
 }
 
 .item {
@@ -217,6 +225,7 @@ header {
   transform: none;
   object-fit: contain;
 }
+
 .abtmepg {
   display: flex;
   max-width: 80%;
@@ -224,38 +233,47 @@ header {
   margin: auto;
   margin-bottom: -60px;
 }
+
 .abth1 {
   font-size: 40px;
   text-align: left;
 }
+
 .abth2 {
   font-size: 25px;
   margin-top: -5px;
   color: #505ce3;
 }
+
 .abt-text {
   font-size: 18px;
   margin-top: 35px;
   line-height: 35px;
 }
+
 .abtmetext-box {
   margin-top: 130px;
   margin-right: 100px;
   margin-bottom: 150px;
 }
+
 .skills {
-  color: #505ce3;;
+  color: #505ce3;
+  ;
 }
+
 .skillslist {
   line-height: 25px;
-  
+
 }
+
 .abtexp {
   max-width: 70%;
   margin: auto;
   margin-bottom: -150px;
-  
+
 }
+
 .abth1-ex {
   font-size: 40px;
   text-align: left;
@@ -263,14 +281,17 @@ header {
   margin-left: 100px;
   color: #505ce3;
 }
+
 .abt-extext {
   margin-left: 120px;
   line-height: 26px;
   font-size: 17px;
 }
+
 .abt-inline {
   margin-left: 45px;
 }
+
 .abt-date {
   font-style: oblique;
   font-size: 12px;
@@ -286,20 +307,24 @@ header {
     margin-bottom: -60px;
     transition: all 0.3s ease;
   }
+
   .abth1 {
     text-align: center;
   }
+
   .abtmetext-box {
     margin-top: 30px;
     margin-right: 20px;
     margin-bottom: 50px;
   }
+
   .abtexp {
     max-width: 90%;
     margin: auto;
     margin-top: 100px;
     margin-bottom: -150px;
   }
+
   .abth1-ex {
     font-size: 30px;
     text-align: center;
@@ -307,11 +332,13 @@ header {
     margin-left: 0px;
     color: #505ce3;
   }
+
   .abt-extext {
     line-height: 26px;
     font-size: 17px;
-    margin-right: 80px; 
+    margin-right: 80px;
   }
+
   .profileimg {
     max-width: 60%;
     height: auto;
@@ -319,7 +346,7 @@ header {
     object-fit: contain;
   }
 }
-  
+
 
 /* footer */
 .footer {
@@ -330,18 +357,22 @@ header {
   display: block;
   margin-bottom: 50px;
 }
+
 .ig img,
 .em img {
   transform: scale(0.5);
   margin-bottom: -35px;
 }
+
 .ig img:hover,
 .em img:hover {
   transform: scale(0.6);
 }
+
 .em {
   margin-left: -40px;
 }
+
 .foot-date {
   font-style: oblique;
   font-size: 10px;
