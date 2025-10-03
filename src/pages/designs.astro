@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import "../styles/footer.css";
+import "../styles/des.css";
+
+import { Image } from "astro:assets";
+import sunClockPoster from "../assets/images/design/poster.jpg";
+import dumplings from "../assets/images/design/dumplings.png";
+import cookui from "../assets/images/design/cookingUI.png";
+---
+
+<Layout>
+  <Header />
+
+  <body>
+    <div class="header">
+      <h1>design</h1>
+      <p>UI and graphic design</p>
+    </div>
+
+    <section id="gallery">
+      <div class="gallery">
+        <div class="item" style="grid-area: dbox-1;">
+          <Image src={sunClockPoster} alt="Sun Clock Poster" />
+        </div>
+
+        <div class="item" style="grid-area: dbox-2;">
+          <Image src={dumplings} alt="Dumplings" />
+        </div>
+
+        <div class="item" style="grid-area: dbox-3;">
+          <Image src={cookui} alt="Cooking UI" />
+        </div>
+      </div>
+    </section>
+  </body>
+
+</Layout>

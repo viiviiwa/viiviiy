@@ -1,90 +1,102 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import "../styles/footer.css";
+import "../styles/illust.css";
+
 import { Image } from "astro:assets";
-import viviNight from "../assets/images/illustrations/Viiviiy_Night.png";
-import viviWhisper from "../assets/images/illustrations/viiviiy_whisper.png";
-import viviDungeon from "../assets/images/illustrations/viiviiy_dungeon.png";
-import viviBuncake from "../assets/images/illustrations/viiviiy_buncake.png";
-import viviFrieren from "../assets/images/illustrations/viiviiy_frieren.png";
-import viviBreakfast from "../assets/images/illustrations/viiviiy_breakfast.png";
-import viviPonyo from "../assets/images/illustrations/viiviiy_ponyo.png";
-import viviBirds from "../assets/images/illustrations/viiviiy_birds.png";
-import viviColor from "../assets/images/illustrations/viiviiy_color.png";
-import viviSeal from "../assets/images/illustrations/viiviiy_seal.png";
-import viviTooth from "../assets/images/illustrations/viiviiy_tooth.png";
-import viviStrawberry from "../assets/images/illustrations/viiviiy_strawberry.png";
-import viviRedHouse from "../assets/images/illustrations/viiviiy_redhouse.png";
-import viviPhoto from "../assets/images/illustrations/viiviiy_photo.png";
-import viviSky from "../assets/images/illustrations/viiviiy_sky.png";
-import viviLetsGo from "../assets/images/illustrations/viiviiy_letsgo.png";
+import viviyNight from "../assets/images/illustrations/Viiviiy_Night.png";
+import viviyWhisper from "../assets/images/illustrations/viiviiy_whisper.png";
+import viviyDungeon from "../assets/images/illustrations/viiviiy_dungeon.png";
+import viviyBuncake from "../assets/images/illustrations/viiviiy_buncake.png";
+import viviyFrieren from "../assets/images/illustrations/viiviiy_frieren.png";
+import viviyBreakfast from "../assets/images/illustrations/viiviiy_breakfast.png";
+import viviyPonyo from "../assets/images/illustrations/viiviiy_ponyo.png";
+import viviyBirds from "../assets/images/illustrations/viiviiy_birds.png";
+import viviyColor from "../assets/images/illustrations/viiviiy_color.png";
+import viviySeal from "../assets/images/illustrations/viiviiy_seal.png";
+import viviyTooth from "../assets/images/illustrations/viiviiy_tooth.png";
+import viviyStrawberry from "../assets/images/illustrations/viiviiy_strawberry.png";
+import viviyRedHouse from "../assets/images/illustrations/viiviiy_redhouse.png";
+import viviyPhoto from "../assets/images/illustrations/viiviiy_photo.png";
+import viviySky from "../assets/images/illustrations/viiviiy_sky.png";
+import viviyLetsGo from "../assets/images/illustrations/viiviiy_letsgo.png";
 ---
 
 <Layout>
-  <section id="gallery">
-    <div class="gallery">
-      <div class="item" style="grid-area: box-1;">
-        <Image src={viviNight} alt="Viiviiy Night" />
-      </div>
+  <Header />
 
-      <div class="item" style="grid-area: box-2;">
-        <Image src={viviWhisper} alt="Viiviiy Whisper" />
-      </div>
-
-      <div class="item" style="grid-area: box-3;">
-        <Image src={viviDungeon} alt="Viiviiy Dungeon" />
-      </div>
-
-      <div class="item" style="grid-area: box-4;">
-        <Image src={viviBuncake} alt="Viiviiy Buncake" />
-      </div>
-
-      <div class="item" style="grid-area: box-5;">
-        <Image src={viviFrieren} alt="Viiviiy Frieren" />
-      </div>
-
-      <div class="item" style="grid-area: box-6;">
-        <Image src={viviBreakfast} alt="Viiviiy Breakfast" />
-      </div>
-
-      <div class="item" style="grid-area: box-7;">
-        <Image src={viviPonyo} alt="Viiviiy Ponyo" />
-      </div>
-
-      <div class="item" style="grid-area: box-8;">
-        <Image src={viviBirds} alt="Viiviiy Birds" />
-      </div>
-      <div class="item" style="grid-area: box-9;">
-        <Image src={viviSeal} alt="Viiviiy Seal" />
-      </div>
-
-      <div class="item" style="grid-area: box-10;">
-        <Image src={viviColor} alt="Viiviiy Color" />
-      </div>
-      
-
-      <div class="item" style="grid-area: box-11;">
-        <Image src={viviTooth} alt="Viiviiy Tooth" />
-      </div>
-
-      <div class="item" style="grid-area: box-12;">
-        <Image src={viviStrawberry} alt="Viiviiy Strawberry" />
-      </div>
-
-      <div class="item" style="grid-area: box-13;">
-        <Image src={viviRedHouse} alt="Viiviiy Red House" />
-      </div>
-
-      <div class="item" style="grid-area: box-14;">
-        <Image src={viviPhoto} alt="Viiviiy Photo" />
-      </div>
-
-      <div class="item" style="grid-area: box-15;">
-        <Image src={viviSky} alt="Viiviiy Sky" />
-      </div>
-
-      <div class="item" style="grid-area: box-16;">
-        <Image src={viviLetsGo} alt="Viiviiy Let's Go" />
-      </div>
+  <body>
+    <div class="header">
+      <h1>illustration</h1>
+      <p>character art & background design</p>
     </div>
-  </section>
+
+    <section id="gallery">
+      <div class="gallery">
+        <div class="item" style="grid-area: box-1;">
+          <Image src={viviyNight} alt="Viiviiy Night" />
+        </div>
+
+        <div class="item" style="grid-area: box-2;">
+          <Image src={viviyWhisper} alt="Viiviiy Whisper" />
+        </div>
+
+        <div class="item" style="grid-area: box-3;">
+          <Image src={viviyDungeon} alt="Viiviiy Dungeon" />
+        </div>
+
+        <div class="item" style="grid-area: box-4;">
+          <Image src={viviyBuncake} alt="Viiviiy Buncake" />
+        </div>
+
+        <div class="item" style="grid-area: box-5;">
+          <Image src={viviyFrieren} alt="Viiviiy Frieren" />
+        </div>
+
+        <div class="item" style="grid-area: box-6;">
+          <Image src={viviyBreakfast} alt="Viiviiy Breakfast" />
+        </div>
+
+        <div class="item" style="grid-area: box-7;">
+          <Image src={viviyPonyo} alt="Viiviiy Ponyo" />
+        </div>
+
+        <div class="item" style="grid-area: box-8;">
+          <Image src={viviyBirds} alt="Viiviiy Birds" />
+        </div>
+        <div class="item" style="grid-area: box-9;">
+          <Image src={viviySeal} alt="Viiviiy Seal" />
+        </div>
+
+        <div class="item" style="grid-area: box-10;">
+          <Image src={viviyColor} alt="Viiviiy Color" />
+        </div>
+
+        <div class="item" style="grid-area: box-11;">
+          <Image src={viviyTooth} alt="Viiviiy Tooth" />
+        </div>
+
+        <div class="item" style="grid-area: box-12;">
+          <Image src={viviyStrawberry} alt="Viiviiy Strawberry" />
+        </div>
+
+        <div class="item" style="grid-area: box-13;">
+          <Image src={viviyRedHouse} alt="Viiviiy Red House" />
+        </div>
+
+        <div class="item" style="grid-area: box-14;">
+          <Image src={viviyPhoto} alt="Viiviiy Photo" />
+        </div>
+
+        <div class="item" style="grid-area: box-15;">
+          <Image src={viviySky} alt="Viiviiy Sky" />
+        </div>
+
+        <div class="item" style="grid-area: box-16;">
+          <Image src={viviyLetsGo} alt="Viiviiy Let's Go" />
+        </div>
+      </div>
+    </section>
+  </body>
 </Layout>

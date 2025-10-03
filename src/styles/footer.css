@@ -1,0 +1,32 @@
+.footer {
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    color: #5D81E1;
+    background-color: white; 
+    height: 14vh;
+}
+
+.ig img,
+.em img {
+    transform: scale(0.5);
+    margin-bottom: -35px;
+}
+
+.ig img:hover,
+.em img:hover {
+    transform: scale(0.6);
+}
+
+.em {
+    margin-left: -40px;
+}
+
+.foot-date {
+    font-style: oblique;
+    font-size: 10px;
+}
+
+.foot-text {
+    margin-top: 1em;
+}

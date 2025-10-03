@@ -1,20 +1,78 @@
 ---
+import "../styles/all_header.css";
 import { Image } from "astro:assets";
-import viivii_logo from "../assets/images/header_homeicon3.png";
+import placeholder from "../assets/images/placeholder.png";
 ---
 
 <header>
-  <div class="stickytop">
-    <p class="logo">
-      <a href="/">
-        <Image src={viivii_logo} alt="logo" />
-      </a>
-    </p>
+  <div class="header-box">
+    <nav id="nav" class="nav">
+      <ul>
+        <li class="column logo mobile">
+          <a href="/"><Image src={placeholder} alt="logo" /></a>
+        </li>
+
+        <!-- empty slot -->
+        <li class="column empty"></li>
+        <!-- empty slot -->
+
+        <li class="column nav-item anim">
+          <a href="/animations">animation</a>
+        </li>
+        <li class="column nav-item design">
+          <a href="/designs">design</a>
+        </li>
+        <li class="column nav-item illust">
+          <a href="/illustrations">illustration</a>
+        </li>
+        <li class="column nav-item about">
+          <a href="/about-me">about</a>
+        </li>
+
+        <li id="hamburger" class="column hamburger mobile">
+          <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <line class="blue" x1="10" y1="15" x2="90" y2="15"></line>
+            <line class="green" x1="10" y1="40" x2="90" y2="40"></line>
+            <line class="yellow" x1="10" y1="65" x2="90" y2="65"></line>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="shapes">
+      <div class="blue-circles blue1"></div>
+      <div class="blue-circles blue2"></div>
+      <div class="circles circ1"></div>
+      <div class="circles circ2"></div>
+      <div class="circles circ3"></div>
+      <div class="circles circ4"></div>
+    </div>
   </div>
-  <nav id="navbar">
-    <a class="nav-link anim" href="/animations">animation</a>
-    <a class="nav-link design" href="/design">design</a>
-    <a class="nav-link illust" href="/illustrations">illustration</a>
-    <a class="nav-link nav-side abtme" href="/about-me">about &amp; contact</a>
-  </nav>
 </header>
+
+<div id="popupMenu" class="popup-menu">
+  <span id="closePopup" class="close-btn">&times;</span>
+  <a href="/">home</a>
+  <a href="/animations">animation</a>
+  <a href="/designs">design</a>
+  <a href="/illustrations">illustration</a>
+  <a href="/about-me">about</a>
+</div>
+
+<script>
+  const popupMenu = document.getElementById("popupMenu");
+  const hamburger = document.getElementById("hamburger");
+  const closeBtn = document.getElementById("closePopup");
+
+  if (hamburger && popupMenu) {
+    hamburger.addEventListener("click", () => {
+      popupMenu.classList.toggle("active");
+    });
+  }
+
+  if (closeBtn && popupMenu) {
+    closeBtn.addEventListener("click", () => {
+      popupMenu.classList.remove("active");
+    });
+  }
+</script>

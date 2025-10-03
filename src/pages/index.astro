@@ -1,30 +1,101 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "../styles/index.css";
+import "../styles/footer.css";
 import { Image } from "astro:assets";
-import viivii_gif from "../assets/images/viiviiy_gif_transparent.gif";
-import viivii_logo from "../assets/images/logo3_t6.png";
+import placeholder from "../assets/images/placeholder.png";
 ---
 
 <Layout>
-  <div class="landing" id="landing">
-    <h1>hello! i'm vivi</h1>
-    <!-- FIXME: Use the h2 element instead of a paragraph -->
-    <p class="h2">Animator &amp; Designer</p>
-    <br />
-    <p class="text">
-      I'm a Sydney based Animator currently studying UI/UX.
-      <br />
-      Available for freelance and collaborations : )
-      <br />
-      <b
-        >Let's
-        <a href="mailto:vivienneyao20@gmail.com" class="chat"> chat! </a>
-      </b>
-    </p>
-  </div>
-  <div>
-    <p class="splash">
-      <Image src={viivii_gif} alt="viivii gif" />
-    </p>
-  </div>
+  <section class="landing">
+    <div class="landing-text">
+      <nav class="header-nav">
+        <a class="column logo" href="/"
+          ><Image src={placeholder} alt="logo" /></a
+        >
+        <a class="column about" href="/about-me">about</a>
+      </nav>
+
+      <h1>
+        <span class="bold">hello</span>
+        <span class="break">im vivi</span>
+      </h1>
+
+      <nav id="navbar">
+        <a class="nav-link anim" href="/animations">animation</a>
+        <a class="nav-link design" href="/designs">design</a>
+        <a class="nav-link illust" href="/illustrations">illustration</a>
+      </nav>
+
+      <p class="text">
+        I'm a Sydney based Animator
+        <span class="break"> currently studying UI/UX </span>
+      </p>
+
+      <ul class="skills-list">
+        <li>UI & UX Design</li>
+        <li>Balsamiq</li>
+        <li>Figma</li>
+        <li>Storyboarding</li>
+        <li>Visual Design</li>
+        <li>Concept Art</li>
+        <li>Adobe</li>
+        <li>Illustration</li>
+        <li>Motion Graphics</li>
+        <li>Blender</li>
+        <li>ToonBoom Harmony</li>
+      </ul>
+
+      <p class="lets">
+        let's
+        <a class="chat" href="mailto:vivienneyao20@gmail.com" class="chat">
+          chat!
+        </a>
+      </p>
+    </div>
+
+    <!-- arrow -->
+    <a href="#gallery-section">
+      <svg
+        class="arrow"
+        viewBox="0 0 200 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line class="arrow-line" x1="65" x2="100" y1="45" y2="80"></line>
+        <line class="arrow-line" x1="135" x2="100" y1="45" y2="80"></line>
+      </svg>
+    </a>
+
+    <div class="shapes">
+      <div class="blue-circles blue1"></div>
+      <div class="blue-circles blue2"></div>
+      <div class="circles circ1"></div>
+      <div class="circles circ2"></div>
+      <div class="circles circ3"></div>
+      <div class="circles circ4"></div>
+    </div>
+  </section>
+
+  <section id="gallery-section">
+    <div class="land-gallery">
+      <div class="item" style="grid-area: box-1"></div>
+      <div class="item" style="grid-area: box-2"></div>
+      <div class="item" style="grid-area: box-3"></div>
+      <div class="item" style="grid-area: box-4"></div>
+      <div class="item" style="grid-area: box-5"></div>
+    </div>
+
+    <div class="see-more-section">
+      <div class="see-more">
+        <h3>see more <span class="break">of my work</span></h3>
+
+        <nav class="navbar2">
+          <a class="nav-items" href="/animations">animation</a>
+          <a class="nav-items" href="/designs">UI design</a>
+          <a class="nav-items" href="/illustrations">illustration</a>
+          <a class="nav-items" href="/about-me">about</a>
+        </nav>
+      </div>
+    </div>
+  </section>
 </Layout>

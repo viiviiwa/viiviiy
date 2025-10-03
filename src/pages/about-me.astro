@@ -1,75 +1,89 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import "../styles/footer.css";
+import "../styles/abt.css";
+
 import { Image } from "astro:assets";
 import viiviiy_pp from "../assets/images/pfp2blue.png";
 ---
 
 <Layout>
-  <div class="abtmepg">
-    <Image class="profileimg" src={viiviiy_pp} alt="Profile Picture" />
-    <div class="abtmetext-box">
-      <h1 class="abth1">⊹ nice to meet you ⊹</h1>
-      <p class="abth2">i'm vivi! — an animator & designer!</p>
+  <Header />
 
-      <!-- FIXME: <br /> means hard line break, try to differentiate them with paragraph breaks, which are more semantic, for a paragraph break, just close the paragraph element and create a new paragraph. -->
+  <div class="header">
+    <h1>about me</h1>
+    <p>animator & designer</p>
+  </div>
+
+  <div class="abtme">
+    <Image class="profileimg" src={viiviiy_pp} alt="Profile Picture" />
+    <div class="text-box">
+      <h2>⊹ nice to meet you ⊹</h2>
       <p class="abt-text">
         My background is in illustration and animation. I love to bring
         characters to life through 2D animation and visual development. I
         specialise in 2D character animation (storyboarding & rough animation)
         and visual development!
-        <br />
-        <br />
-        I am also currently expanding into UI/UX design, exploring how interactivity
-        and thoughtful design can enhance user experiences while drawing on my creative
-        background in storytelling and visual communication.
-        <br />
-        <br />
-        I've graduated from UTS with a Bachelors of Design in Animation, and I am
-        now working on my Masters in Interaction Design and Electronic Arts at the
-        University of Sydney.
       </p>
-      <!-- FIXME: Avoid using <br /> for spacing. Use CSS margin or padding instead. -->
-      <br />
-      <!-- FIXME: Try to use heading element hierarchically, h1, h2, h3... -->
-      <span class="skills">skills — </span>
-      <!-- FIXME: This is a list of skills. It would be more semantic to use an unordered list (<ul>) with list items (<li>) for each skill. -->
+      <p class="abt-text">
+        I am also currently expanding into UI/UX design, exploring how
+        interactivity and thoughtful design can enhance user experiences while
+        drawing on my creative background in storytelling and visual
+        communication.
+      </p>
+      <p class="abt-text">
+        I've graduated from UTS with a Bachelors of Design in Animation, and I
+        am now working on my Masters in Interaction Design and Electronic Arts
+        at the University of Sydney.
+      </p>
 
-      <br /><span class="skillslist"
-        >UI &amp; Visual Design ⊹ Figma ⊹ Storyboarding ⊹ Concept Art ⊹ Adobe ⊹
-        Illustration ⊹ Motion Graphics ⊹ Blender ⊹ ToonBoom Harmony
-      </span>
+      <h3>skills</h3>
+
+      <ul class="skills-list">
+        <li>UI & UX Design</li>
+        <li>Balsamiq</li>
+        <li>Figma</li>
+        <li>Storyboarding</li>
+        <li>Visual Design</li>
+        <li>Concept Art</li>
+        <li>Adobe</li>
+        <li>Illustration</li>
+        <li>Motion Graphics</li>
+        <li>Blender</li>
+        <li>ToonBoom Harmony</li>
+      </ul>
     </div>
   </div>
 
-  <!-- TODO: This could be a <section> element with an id, e.g., <section id="experience"> -->
-  <div class="abtexp">
-    <!-- FIXME: There should only be one <h1> per page. This should be an <h2> because it's a subsection of the page. -->
-    <h1 class="abth1-ex">experience —</h1>
-    <!-- FIXME: This structure is hard for screen readers to parse. Consider using a <ul> with each job as a <li>. Inside each <li>, you could use a heading for the role and paragraphs for the details. Using <br> for layout should be avoided. -->
-    <p class="abt-extext">
-      <!-- FIXME: Date ranges use en-dash, not simple dash, you can use the en-dash with `&ndash;` -->
-      ⊹ Intern @ Armchair Productions <span class="abt-date"
-        >(July 2024 - Sep 2024)</span
-      > ⊹
-      <br />
-      <span class="abt-inline"
-        >Contributed to creating special affects animation assets, that matched
-        the visual style of the production</span
-      >
+  <section class="exp">
+    <h2>experience —</h2>
+    <ul class="exp-list">
+      <li>
+        Intern @ Armchair Productions
+        <span class="abt-date">(July 2024 &ndash; Sep 2024)</span>
 
-      <br /> ⊹ Animator <span class="abt-date">(2021 - 2023)</span> ⊹
-      <br />
-      <span class="abt-inline"
-        >Worked on a wide array of short films, leading with concept art,
-        storyboarding & animation
-      </span>
+        <p class="abt-hang">
+          Contributed to creating special affects animation assets, that matched
+          the visual style of the production
+        </p>
+      </li>
 
-      <br /> ⊹ Freelancer <span class="abt-date">(Ongoing)</span> ⊹
-      <br />
-      <span class="abt-inline"
-        >Communicated and created Illustrations &amp; animations for a wide
-        range of clients (twitch assets, logos)</span
-      >
-    </p>
-  </div>
+      <li>
+        Animator <span class="abt-date">(2021 &ndash; 2023)</span>
+        <p class="abt-hang">
+          Worked on a wide array of short films, leading with concept art,
+          storyboarding & animation
+        </p>
+      </li>
+
+      <li>
+        Freelancer <span class="abt-date">(Ongoing)</span>
+        <p class="abt-hang">
+          Communicated and created Illustrations &amp; animations for a wide
+          range of clients (twitch assets, logos)
+        </p>
+      </li>
+    </ul>
+  </section>
 </Layout>
