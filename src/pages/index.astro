@@ -3,15 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
 import "../styles/footer.css";
 import { Image } from "astro:assets";
-import placeholder from "../assets/images/placeholder.png";
+import viviflood from "../assets/images/design/floodmates2.png";
+import viviMarket from "../assets/videos/market.gif";
+import viviLeaves from "../assets/videos/leaves.gif";
+import viviyPonyo from "../assets/images/illustrations/viiviiy_ponyo.png";
+import viviRocket from "../assets/images/illustrations/rocket.png";
+import logo from "../assets/images/logosig1.png";
 ---
 
 <Layout>
   <section class="landing">
     <div class="landing-text">
       <nav class="header-nav">
-        <a class="column logo" href="/"
-          ><Image src={placeholder} alt="logo" /></a
+        <a class="column logo" href="/about-me"
+          ><Image src={logo} alt="logo" /></a
         >
         <a class="column about" href="/about-me">about</a>
       </nav>
@@ -67,8 +72,6 @@ import placeholder from "../assets/images/placeholder.png";
     </a>
 
     <div class="shapes">
-      <div class="blue-circles blue1"></div>
-      <div class="blue-circles blue2"></div>
       <div class="circles circ1"></div>
       <div class="circles circ2"></div>
       <div class="circles circ3"></div>
@@ -78,11 +81,21 @@ import placeholder from "../assets/images/placeholder.png";
 
   <section id="gallery-section">
     <div class="land-gallery">
-      <div class="item" style="grid-area: box-1"></div>
-      <div class="item" style="grid-area: box-2"></div>
-      <div class="item" style="grid-area: box-3"></div>
-      <div class="item" style="grid-area: box-4"></div>
-      <div class="item" style="grid-area: box-5"></div>
+      <div class="item" style="grid-area: box-1">
+        <Image src={viviRocket} alt="rocket" />
+      </div>
+      <div class="item" style="grid-area: box-2">
+        <Image src={viviflood} alt="UI Design" />
+      </div>
+      <div class="item" style="grid-area: box-3">
+        <Image src={viviMarket} alt="market" />
+      </div>
+      <div class="item" style="grid-area: box-4">
+        <Image src={viviyPonyo} alt="ponyo" />
+      </div>
+      <div class="item" style="grid-area: box-5">
+        <Image src={viviLeaves} alt="leaves" />
+      </div>
     </div>
 
     <div class="see-more-section">

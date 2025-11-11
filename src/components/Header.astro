@@ -1,7 +1,7 @@
 ---
 import "../styles/all_header.css";
 import { Image } from "astro:assets";
-import placeholder from "../assets/images/placeholder.png";
+import logo from "../assets/images/logosig1.png";
 ---
 
 <header>
@@ -9,7 +9,7 @@ import placeholder from "../assets/images/placeholder.png";
     <nav id="nav" class="nav">
       <ul>
         <li class="column logo mobile">
-          <a href="/"><Image src={placeholder} alt="logo" /></a>
+          <a href="/"><Image src={logo} alt="logo" /></a>
         </li>
 
         <!-- empty slot -->
@@ -40,12 +40,15 @@ import placeholder from "../assets/images/placeholder.png";
     </nav>
 
     <div class="shapes">
-      <div class="blue-circles blue1"></div>
-      <div class="blue-circles blue2"></div>
-      <div class="circles circ1"></div>
-      <div class="circles circ2"></div>
-      <div class="circles circ3"></div>
-      <div class="circles circ4"></div>
+      <div class="circle-group group-left">
+        <div class="circles circ1"></div>
+        <div class="circles circ2"></div>
+      </div>
+
+      <div class="circle-group group-right">
+        <div class="circles circ3"></div>
+        <div class="circles circ4"></div>
+      </div>
     </div>
   </div>
 </header>

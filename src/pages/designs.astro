@@ -8,32 +8,42 @@ import { Image } from "astro:assets";
 import sunClockPoster from "../assets/images/design/poster.jpg";
 import dumplings from "../assets/images/design/dumplings.png";
 import cookui from "../assets/images/design/cookingUI.png";
+
+import viviflood from "../assets/images/design/desfloodmates.png";
 ---
 
 <Layout>
   <Header />
 
   <body>
-    <div class="header">
-      <h1>design</h1>
-      <p>UI and graphic design</p>
-    </div>
+    <section class="all">
+      <div class="header">
+        <h1>design</h1>
+        <p>UI and graphic design</p>
+      </div>
 
-    <section id="gallery">
-      <div class="gallery">
-        <div class="item" style="grid-area: dbox-1;">
+      <section class="gallery">
+        <div class="item" data-area="dbox-1">
           <Image src={sunClockPoster} alt="Sun Clock Poster" />
         </div>
 
-        <div class="item" style="grid-area: dbox-2;">
+        <div class="item" data-area="dbox-4">
+          <Image src={viviflood} alt="flood" />
+        </div>
+
+        <div class="item text" data-area="dtext-4">
+          <h3>FloodMates</h3>
+          <p>Rural Australians are often under-resourced during floods. Unable to recieve support & aid in a timely manner. FloodMates is designed to connect Australians for urgent aid and live updates for flood emergencies</p>
+        </div>
+
+        <div class="item" data-area="dbox-2">
           <Image src={dumplings} alt="Dumplings" />
         </div>
 
-        <div class="item" style="grid-area: dbox-3;">
+        <div class="item" data-area="dbox-3">
           <Image src={cookui} alt="Cooking UI" />
         </div>
-      </div>
+      </section>
     </section>
   </body>
-
 </Layout>

@@ -1,25 +1,43 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: white;
+    background-color: #C0D9FF;
     margin: 0;
     padding: 0;
 }
 
+/* White rounded container */
+.all {
+    background-color: #FFFCF1;
+    margin-top: 3em;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px -7px 10px rgba(111, 132, 165, 0.2);
+    padding-bottom: 3em;
+}
+
 .header {
-    background: white;
     color: #5D81E1;
     text-align: center;
     padding-top: 4em;
-    position: relative;
-    z-index: -1;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
 
-.item {
-    object-fit: overflow;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(18em, 1fr));
+    gap: 1.2em;
+    grid-template-areas:
+        "dbox-2 dbox-2 dbox-2"
+        "dbox-4 dbox-4 dtext-4"
+        "dbox-1 dbox-3 dbox-3";
+    max-width: 80%;
+    margin: 100px auto 0 auto;
+    justify-items: center;
+    align-items: center;
+    /* centers items vertically by default */
 }
 
 .item img {
@@ -27,18 +45,128 @@ h1 {
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: 20em 20em 20em;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.2em;
-    grid-template-areas:
-        "dbox-2 dbox-2 dbox-2"
-        "dbox-1 dbox-3 dbox-3";
-    max-width: 80%;
-    margin: auto;
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* Assign grid areas */
+.item[data-area="dbox-1"] {
+    grid-area: dbox-1;
+}
+
+.item[data-area="dbox-2"] {
+    grid-area: dbox-2;
+}
+
+.item[data-area="dbox-3"] {
+    grid-area: dbox-3;
+}
+
+.item[data-area="dbox-4"] {
+    grid-area: dbox-4;
+}
+
+.item[data-area="dtext-4"] {
+    grid-area: dtext-4;
+    display: flex;
+    align-items: center;
+    /* vertical center */
     justify-content: center;
-    margin-top: 100px;
+    /* horizontal center */
+    text-align: center;
+    padding: 1em;
+}
+
+/* Optional text styling */
+.text {
+    color: #5D81E1;
+}
+
+.item[data-area="dtext-4"] {
+    grid-area: dtext-4;
+    display: flex;
+    align-items: center;
+    /* vertical center next to image */
+    justify-content: center;
+    /* horizontal center */
+    text-align: center;
+    padding: 1em;
+    flex-direction: column;
+    /* stack h3 on top of p */
+    gap: 0.5em;
+    /* space between h3 and p */
+}
+
+.text h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #5D81E1;
+}
+
+.text p {
+    margin: 0;
+    font-size: 1em;
+    color: #5D81E1;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens — 2 columns */
+@media (max-width: 1100px) {
+    .item[data-area="dtext-4"] {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Small screens — 1 column stacked */
+@media (max-width: 650px) {
+    .item[data-area="dtext-4"] {
+        align-items: center;
+        /* stays below the image */
+        text-align: center;
+    }
+}
+
+/* --------- RESPONSIVE BREAKPOINTS --------- */
+
+/* Medium screens — 2 columns */
+@media (max-width: 1100px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(16em, 1fr));
+        grid-template-areas:
+            "dbox-2 dbox-2"
+            "dbox-4 dtext-4"
+            "dbox-1 dbox-3";
+        max-width: 90%;
+    }
+
+    .item[data-area="dtext-4"] {
+        align-items: center;
+        /* vertical center relative to image */
+    }
+}
+
+/* Small screens — 1 column stacked */
+@media (max-width: 650px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "dbox-2"
+            "dbox-4"
+            "dtext-4"
+            "dbox-1"
+            "dbox-3";
+        max-width: 92%;
+        margin-top: 60px;
+    }
+
+    .item[data-area="dtext-4"] {
+        align-items: flex-start;
+        /* sits below image */
+        text-align: center;
+    }
 }

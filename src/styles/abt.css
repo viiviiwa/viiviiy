@@ -1,23 +1,30 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: white;
+    background-color: #C0D9FF;
     margin: 0;
     padding: 0;
 }
 
+.all {
+    background-color: #FFFCF1;
+    margin-top: 3em;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px -7px 10px rgb(111, 132, 165, 0.2);
+    padding-bottom: 2em;
+}
+
 .header {
-    background: white;
     color: #5D81E1;
     text-align: center;
     padding-top: 4em;
     position: relative;
-    z-index: -1;
 }
 
 h1 {
-    font-size: 4em;
-    color: #5D81E1;
+    font-size: 3em;
 }
+
 .profileimg {
     max-width: 40%;
     height: auto;
@@ -30,6 +37,7 @@ h1 {
     max-width: 80%;
     text-align: left;
     margin: auto;
+    color: #5D81E1;
 }
 
 h2 {
@@ -76,14 +84,13 @@ h3 {
 .exp {
     max-width: 70%;
     margin:auto;
-    margin-bottom: 4em;
 }
 
 .exp-list {
-    margin-left: 120px;
     line-height: 26px;
     font-size: 17px;
     list-style: none;
+    color: #5D81E1;
 }
 
 .exp-list li::before {
@@ -97,4 +104,27 @@ h3 {
 .abt-date {
     font-style: oblique;
     font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    h2 {
+        text-align: center;
+    }
+
+    .abtme {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-box {
+        margin-top: 2em;
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+
+    .profileimg {
+        max-width: 70%;
+        margin-top: 2em;
+    }
 }

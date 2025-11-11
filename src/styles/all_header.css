@@ -9,7 +9,9 @@
     width: auto;
     overflow: hidden;
     position: relative;
-    background-color: white; 
+    background-color: #E4F0F1; 
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 }
 
 .nav {
@@ -56,7 +58,7 @@ line{
 }
 
 .blue {
-    stroke: #A9D3F3; 
+    stroke: #73AFF4; 
 }
 
 .green {
@@ -87,60 +89,52 @@ line{
     color: #5D81E1;
 }
 
-.blue-circles {
-    background-color: #E3F5FD;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0;
-}
-
-.blue1 {
-    width: 3em;
-    height: 3em;
-    top: 10%;
-    left: 30%;
-}
-
-.blue2 {
-    width: 8em;
-    height: 8em;
-    top: 10%;
-    right: 30%;
-}
-
 .circles {
-    background-color: #FDF4E3;
-    border-radius: 50%;
     position: absolute;
+    background-color: #FFFCF2;
+    border-radius: 50%;
     z-index: 0;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.circle-group {
+    position: absolute;
+    inset: 0;
 }
 
 .circ1 {
     width: 25em;
     height: 25em;
-    bottom: -95%;
-    left: 20%;
+    bottom: -18vh;
+    left: 22vw;
 }
 
 .circ2 {
     width: 45em;
     height: 45em;
-    bottom: -140%;
-    left: -8%;
+    bottom: -30vh;
+    left: -5vw;
 }
 
 .circ3 {
     width: 25em;
     height: 25em;
-    bottom: -105%;
-    right: 7%;
+    bottom: -24vh;
+    right: 12vw;
 }
 
 .circ4 {
     width: 55em;
     height: 55em;
-    bottom: -160%;
-    right: -20%;
+    bottom: -35vh;
+    right: -20vw;
+}
+
+@media (max-width: 1300px) {
+    .circle-group .circles {
+        opacity: 0;
+    }
 }
 
 .popup-menu .close-btn {
@@ -157,7 +151,7 @@ line{
 @media (max-width: 1000px) {
     .logo {
         transform: scale(0.8);
-        margin-left: -1em; 
+        margin-left: -3em; 
     }
 
     .nav {
@@ -187,7 +181,7 @@ line{
 
 .popup-menu {
     display: none;
-    background-color: #ffffff;
+    background-color: #FFFCF1;
     position: fixed;
     top: 0;
     left: 0;
@@ -211,10 +205,6 @@ line{
     text-decoration: none;
     color: #5D81E1;
     transition: background 0.2s;
-}
-
-.popup-menu a:hover {
-    background-color: #c66868;
 }
 
 @media (max-width: 1000px) {
