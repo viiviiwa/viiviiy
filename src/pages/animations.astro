@@ -5,22 +5,53 @@ import "../styles/footer.css";
 import "../styles/anim.css";
 
 import showReel from "../assets/videos/2DAnimation.mp4";
+
+import { Image } from "astro:assets";
+import stinger from "../assets/videos/gifs/stinger.gif";
+import baking from "../assets/videos/gifs/baking.gif";
+import eyes from "../assets/videos/gifs/eyes.gif";
+import scratch from "../assets/videos/gifs/scract.gif";
+import viivii from "../assets/videos/gifs/viiviiy_gif.gif";
 ---
 
 <Layout>
   <Header />
 
   <body>
-    <section>
-      <div class="header">
-        <h1>animation</h1>
-        <p>2D character animation & motion graphics</p>
-      </div>
+    <section class="all">
+      <section class="showreel">
+        <div class="header">
+          <h1>animation</h1>
+          <p>2D character animation & motion graphics</p>
+        </div>
 
-      <video controls class="video" src={showReel}>
-        <source src={showReel} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <video controls class="video" src={showReel}>
+          <source src={showReel} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section class="gallery">
+        <div class="item crop" style="grid-area:abox-1">
+          <Image src={baking} alt="baking" />
+        </div>
+
+        <div class="item" style="grid-area:abox-2">
+          <Image src={eyes} alt="eyes" />
+        </div>
+
+        <div class="item" style="gird-area:abox-3">
+          <Image src={stinger} alt="singer" />
+        </div>
+
+        <div class="item crop" style="gird-area:abox-4">
+          <Image src={scratch} alt="scratch" />
+        </div>
+
+        <div class="item" style="gird-area:abox-5">
+          <Image src={viivii} alt="singer" />
+        </div>
+      </section>
     </section>
   </body>
 </Layout>

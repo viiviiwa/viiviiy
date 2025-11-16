@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-section {
+.all {
     background-color: #FFFCF1;
     margin-top: 3em;
     border-top-left-radius: 50px;
@@ -30,4 +30,89 @@ h1 {
     padding-top: 3em;
     display: block;
     margin: auto;
+}
+
+/* --- BENTO GALLERY --- */
+
+/* -------- GALLERY (BENTO STYLE) -------- */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 1.5em;
+    grid-template-areas:
+        "abox-1 abox-2 abox-2"
+        "abox-4 abox-3 abox-5";
+    max-width: 80%;
+    margin: 100px auto 0 auto;
+    justify-items: center;
+}
+
+/* -------- ITEM BASE STYLE -------- */
+
+.item {
+    width: 100%;
+    height: 260px;
+    background-color: #e4eef1;
+    border-radius: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crop img {
+    transform: scale(1.32);
+    /* pre-zoomed crop */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* -------- TABLET — 2 COLUMNS -------- */
+@media (max-width: 65em) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 1em;
+        grid-template-areas:
+            "abox-1 abox-2"
+            "abox-2 abox-3"
+            "abox-4 abox-5";
+    }
+}
+
+
+/* -------- MOBILE — 1 COLUMN -------- */
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1em;
+        grid-template-areas:
+            "abox-1"
+            "abox-2"
+            "abox-3"
+            "abox-4"
+            "abox-5";
+        margin-top: 80px;
+    }
+
+    .item {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
 }
