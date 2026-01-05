@@ -5,12 +5,14 @@ import "../styles/footer.css";
 import "../styles/illust.css";
 
 import { Image } from "astro:assets";
+
+import viviySleepy from "../assets/images/illustrations/viiviiy_sleepy.gif";
 import viviyNight from "../assets/images/illustrations/Viiviiy_Night.png";
 import viviyWhisper from "../assets/images/illustrations/viiviiy_whisper.png";
 import viviyDungeon from "../assets/images/illustrations/viiviiy_dungeon.png";
 import viviyBuncake from "../assets/images/illustrations/viiviiy_buncake.png";
 import viviyFrieren from "../assets/images/illustrations/viiviiy_frieren.png";
-import viviyBreakfast from "../assets/images/illustrations/viiviiy_breakfast.png";
+import viviyBreakfast from "../assets/images/illustrations/ikittchen.png";
 import viviyPonyo from "../assets/images/illustrations/viiviiy_ponyo.png";
 import viviyBirds from "../assets/images/illustrations/viiviiy_birds.png";
 import viviyColor from "../assets/images/illustrations/viiviiy_color.png";
@@ -35,6 +37,10 @@ import viviyLetsGo from "../assets/images/illustrations/viiviiy_letsgo.png";
 
       <section id="gallery">
         <div class="gallery">
+          <div class="item" style="grid-area: box-0;">
+            <Image src={viviySleepy} alt="Viiviiy Night" />
+          </div>
+
           <div class="item" style="grid-area: box-1;">
             <Image src={viviyNight} alt="Viiviiy Night" />
           </div>
@@ -100,9 +106,5 @@ import viviyLetsGo from "../assets/images/illustrations/viiviiy_letsgo.png";
         </div>
       </section>
     </section>
-
-    
   </body>
-
-
 </Layout>
